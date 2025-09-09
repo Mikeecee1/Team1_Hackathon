@@ -59,6 +59,7 @@ This project focuses on predicting credit card customer churn to help the bank i
    - Statistical summaries and distribution analysis
    - Correlation analysis to identify relationships between variables
    - Missing value analysis and data quality assessment
+   - Use of y-data to gain deeper insights of datasets including correlations and interactions
 
 2. **Feature Engineering**
    - Created derived features like utilization ratios and transaction frequency metrics
@@ -173,6 +174,11 @@ The analysis was structured in three phases:
 - **Real-time Analytics**: Implement streaming data processing for live churn monitoring
 - **Causal Inference**: Study causal analysis techniques to better understand churn drivers
 
+### Collaboration methodology
+   **Team Strategy**: Held regular meetings via GoogleMeet to discuss strategy and via Discord to coordinate activities
+   **Collaboration**: We generally worked in teams of two with each team undertaking to update a single feature and coordinating work and updates. This approach helped avoid merge conflicts, while enabling all team members to make contributions.
+   **Ideation/ Exprimentation**: We used a practice repository to explore ideas, test code and work out collaboration methodology.
+
 ## Deployment
 ### Heroku
 
@@ -194,24 +200,17 @@ The analysis was structured in three phases:
 1. **Pandas** (Data Manipulation)
 2. **NumPy** (Numerical Computing)
 3. **Matplotlib & Seaborn** (Data Visualization)
+4. **y-data_profiling**(Data Extraction/Visualisatiion)
+
 
 ## Credits 
 
-* In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
+* For git collaboration we drew extensively on [GitCheatsheet](https://github.com/Vasi012/Git-Cheatsheet) produced by our tutor Vasi.
 * You can break the credits section up into Content and Media, depending on what you have included in your project. 
 
 ### Content 
 
-- The text for the Home page was taken from Wikipedia Article A
-- Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
-
 ### Media
 
-- The photos used on the home and sign-up page are from This Open-Source site
-- The images used for the gallery page were taken from this other open-source site
-
-
-
 ## Acknowledgements (optional)
-* Thank the people who provided support through this project.
+* Vasi012.
