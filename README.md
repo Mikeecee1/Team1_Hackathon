@@ -29,11 +29,9 @@ Key takeaways for churn risk: **(1)** Customers with higher education or income 
 
 ### Business Requirement 1: Identify at-risk customers
 
-We will utilise predictive visualisations of churn likelihood to identify high-risk customers, enabling early intervention and a deeper understanding of the drivers of churn.
+We use cleaned and transformed customer data to identify factors linked to churn, helping to highlight at-risk customers and inform retention strategies.
 
-- **Churn Probability Heatmap:** Visual representation of customer risk scores across different segments
-- **Customer Risk Dashboard:** Interactive filters to identify high-risk customers by demographics and behavior
-- **Churn Prediction Model Results:** Confusion matrix and ROC curves to validate model performance
+- **Customer churn Dashboard:** Interactive filters to identify high-risk customers by demographics and behavior
 
 ### Business Requirement 2: Understand churn factors
 
@@ -41,7 +39,7 @@ We will create visualisations of behaviors and patterns linked to churn to clear
 
 - **Feature Importance Charts:** Bar charts showing which factors most influence churn decisions
 - **Correlation Matrix:** Heatmap displaying relationships between variables and churn
-- **Distribution Analysis:** Histograms and box plots comparing at-risk vs retained customers across key metricsoss key metrics
+- **Distribution Analysis:** Histograms and box plots comparing the distiriubution of key features for churned vs. retained customers.
 
 ### Business Requirement 3: Enable data-driven decisions
 
@@ -49,7 +47,6 @@ We will present advanced analytics in executive dashboards to support actionable
 
 - **Executive Summary Dashboard:** KPIs and trends for leadership decisions
 - **Segment Analysis Views:** Churn rates by customer segments (income, age, card type)
-- **Retention Strategy Recommendations:** Visual guides for targeted intervention
 
 ## Analysis techniques used
 
@@ -61,41 +58,34 @@ We will present advanced analytics in executive dashboards to support actionable
    - Correlation analysis to identify relationships between variables
    - Missing value analysis and data quality assessment
    - Use of y-data to gain deeper insights into datasets, including correlations and interactions
+   - Did a chi-square test to check the independence of categorical variables.
 
 2. **Feature Engineering**
 
-   - Created derived features like utilisation ratios and transaction frequency metrics
-   - Categorical encoding for machine learning models
-   - Feature scaling and normalisation
-
-3. **Machine Learning Techniques**
-   - **Logistic Regression**: Baseline model for interpretability
-   - **Random Forest**: Ensemble method for feature importance analysis
-   - **Gradient Boosting (XGBoost)**: Advanced ensemble for improved prediction accuracy
-   - **Naive Bayes**: Probabilistic classifier (already included in dataset)
+   - Since most of the data was cleaned with no missing values, we did very basic feature engineering.
+   - Categorical encoding the age into groups for better anaysis in visualisations.
+   - Basic outlier detection and treatment using IQR method.
 
 ### Structure and Justification
 
-The analysis was structured in three phases:
+The analysis was structured in 3 phases:
 
-1. **Descriptive Analytics**: Understanding current churn patterns
-2. **Predictive Analytics**: Building models to forecast future churn
-3. **Prescriptive Analytics**: Developing actionable recommendations
+1. **Data Preparation & Cleaning**: Raw customer data was cleaned, transformed, and grouped to ensure consistency and enable meaningful analysis.
+2. **Descriptive Analytics**: Conducted basic EDA , Y-datat profiling to find patterns and trends, Chi-square test to check independenc of categorical variables. 
+3. **Visualization** : Created basic boxplots, histograms, correlation heatmaps to understand the data better, validate hypothesis and communicate findings effectively.
+Created dashboards in Power BI to present insights.
+
 
 ### Data Limitations and Alternative Approaches
 
-- **Limitation**: Imbalanced dataset with fewer churned customers
-  - **Solution**: Applied SMOTE (Synthetic Minority Oversampling Technique) and class weighting
-- **Limitation**: Limited temporal data for trend analysis
-  - **Alternative**: Used cross-sectional analysis with behavioral proxies
-- **Limitation**: Missing external economic factors
-  - **Mitigation**: Focused on internal behavioral and demographic patterns
+- **Limitation**: The dataset was relatively small and clean, with no major quality issues.
+Some categorical fields contained "Unknown" values.
+-**Mitigation**: Retained "Unknown" entries and treated them as a separate category to preserve data integrity.
 
 ### Generative AI Usage
 
-- **Ideation**: Used AI tools for feature engineering ideas and hypothesis generation.
-- **Code Optimization**: Leveraged AI for code review and performance optimisation suggestions.
-- **Design Thinking**: AI-assisted with dashboard layout and visualisation selection.
+- **Ideation**: Used AI for ideation and analysis and visualisation suggestions.
+- **Markdown**: co-pilot assisted in writing and formatting markdown content.
 
 ## Ethical considerations
 
@@ -123,39 +113,41 @@ The analysis was structured in three phases:
 
 **Content**: High-level KPIs and summary metrics
 
-- **Widgets**: Churn rate gauge, customer count cards, trend line charts
-- **Interactive Elements**: Date range selector, segment filters
-- **Target Audience**: C-level executives and senior management
+- **Visuals**: 
+      * customer count cards and summary cards.
+      * Pie chart showing the proportion of churned vs retained customers.
+      *  Scatter plot showing churn rate vs age.
+      * Bar chart showing the churn count by card category.
 
-### Page 2: Customer Segmentation Analysis
+- **Interactive Elements**: Slicers for Income Category, Card Category, Gender.
 
-**Content**: Detailed breakdown of churn patterns by customer segments
 
-- **Widgets**: Demographic distribution charts, income category analysis, card type breakdown
-- **Interactive Elements**: Multi-select filters, drill-down capabilities
-- **Target Audience**: Marketing and customer relationship managers
+### Page 2: Demographic Insights
 
-### Page 3: Behavioral Analytics
+**Content**: Detailed breakdown of churn patterns by demographic factors.
 
-**Content**: Transaction patterns and usage behavior analysis
+- **Visuals**: 
+      * Bar charts showing churn rate (%) by gender, education level, and income category.
+      * A pie chart showing the churn distribution by marital status.
 
-- **Widgets**: Histogram for transaction frequency, scatter plot for utilisation, and analysis of inactive months.
-- **Interactive Elements**: Parameter sliders, comparative views
-- **Target Audience**: Data analysts and product managers
+- **Interactive Elements**: Slicers for Income Category, Card Category, Gender.
 
-### Page 4: Predictive Insights
+### Page 3: Behavioral Insights
 
-**Content**: Model results and risk scoring
+**Content**: Analysis of customer behavior and its impact on churn.
 
-- **Widgets**: Risk score distributions, model performance metrics, feature importance rankings
-- **Interactive Elements**: Customer lookup, risk threshold adjustments
-- **Target Audience**: Risk management and retention teams
+**Visuals**: 
+- scatter plot showing churn rate vs months inactive.
+- Bar chart showing the churn rate by avg utilisation ratio of credit limit.
+- Line and clustered column chart showing churn rate and transaction amount by transaction counts (with tooltip showing the statistical summary).
+
 
 ### Communication Strategy
 
-- For technical audiences, use a professional tone when providing detailed statistical metrics, model performance indicators, and technical documentation tailored to their needs.
-- For audiences less familiar with technical details, use clear visuals with summaries and recommended actions.
-- The use of interactive design will enable users to explore data independently through self-service analytics, allowing them to access and analyse data at their convenience.
+- For audience less familiar with technical details, the clear visuals should help communicate key insights effectively.
+- The use of summary cards and KPIs on the executive overview page will highlight the most critical information at a glance.
+- Clear labelling and legends on charts will aid interpretation.
+- The use of interactive design and slicers will enable users to explore data independently.
 
 ## Unfixed Bugs
 
