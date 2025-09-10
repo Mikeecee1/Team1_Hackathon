@@ -89,23 +89,13 @@ Some categorical fields contained "Unknown" values.
 
 ## Ethical considerations
 
+Were there any data privacy, bias or fairness issues with the data? No, since its a public accessible dataset from Kaggle.
+How did you overcome any legal or societal issues? No.
+
 ### Data Privacy Issues
 
-- **Challenge**: Customer financial data contains sensitive personal information
-- **Mitigation**: Implemented data anonymisation techniques and removed direct identifiers
-- **Compliance**: Ensured adherence to GDPR and banking data protection regulations
+The dataset has no sensitive personal information. It contains demographic and transactional data, but no direct identifiers like names or social security numbers. There was just a CLUENTNUM column which we dropped. 
 
-### Bias and Fairness
-
-- **Identified Bias**: Possible demographic discrimination (age, gender, income).
-- **Fairness Measures**: Implemented fairness metrics to ensure equal treatment across demographic groups
-- **Model Auditing**: Regular bias testing across different customer segments
-
-### Legal and Societal Considerations
-
-- **Transparency**: Developed explainable AI models to ensure decision transparency.
-- **Customer Rights**: Established ways for customers to review and challenge decisions.
-- **Responsible AI**: Established guidelines for ethical use of churn predictions in customer interactions.
 
 ## Dashboard Design
 
@@ -116,10 +106,14 @@ Some categorical fields contained "Unknown" values.
 - **Visuals**: 
       * customer count cards and summary cards.
       * Pie chart showing the proportion of churned vs retained customers.
-      *  Scatter plot showing churn rate vs age.
-      * Bar chart showing the churn count by card category.
+      * A donut chart showing attrition rate by gender.
+      * Scatter plot showing churn rate vs age.
+      * Pie chart sohwing churn rate by Marital status.
+      * Bar chart showing the churn count by avg utilisation ratio of credit limit.
+      * Line chart showing churn rate over inactive months.
+      * Line and clustered column chart showing churn rate and transaction amount by transaction counts (with tooltip showing the statistical summary).
 
-- **Interactive Elements**: Slicers for Income Category, Card Category, Gender.
+- **Interactive Elements**: Slicers for Income Category, Card Category, Gender, Education level.
 
 
 ### Page 2: Demographic Insights
@@ -166,15 +160,10 @@ Some categorical fields contained "Unknown" values.
 
 ### Challenges Faced
 
-1. **Data Quality Issues**
+1. **Working Collaborative Using Git**
 
-   - **Challenge**: Some categorical fields contained "Unknown" values.
-   - **Strategy**: Developed robust data cleaning pipelines and validation rules
-
-2. **Working Collaborative Using Git**
-
-   - **Challenge**: Initially, the team used git clone instead of forking the repository, which required manual merges on GitHub instead of streamlined version control in VS Code.
-   - **Strategy**: Established proper Git workflows (forking, branching, and pull requests), improving collaboration efficiency and reducing integration conflicts.
+   - **Challenge**: Initially, the team used git clone instead of forking the repository, which required manual merges on GitHub instead of streamlined version control in VS Code. Ended up with some issues. 
+   - **Strategy**: Took guidance from our tutor Vasi and learned how to collaborate effectively using git.Established proper Git workflows (branching, and pull requests), improving collaboration efficiency and reducing integration conflicts.
 
 ### Future Learning Goals
 
