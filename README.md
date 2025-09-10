@@ -153,23 +153,14 @@ Some categorical fields contained "Unknown" values.
 
 ### Known Issues
 
-1. **Model Overfitting on Small Segments**
-
-   - **Issue**: Some segments have too little data, leading to overfitting.
-   - **Reason Not Fixed**: Needs more data or advanced regularisation beyond project scope.
-   - **Workaround**: Added confidence intervals and sample size warnings
-
-2. **Dashboard Performance with Large Datasets**
-   - **Issue**: Slow loading times when filtering across all customer records.
-   - **Reason Not Fixed**: Power BI can't process large datasets in real time.
-   - **Mitigation**: Implemented data aggregation and caching strategies
+**Dashboard Performance with Large Datasets**
+   - **Issue**: The dashboard experiences slow loading times when applying filters across all customer records.
+   - **Reason Not Fixed**: Power BI has limitations in handling very large datasets in real time, and further optimisation or aggregation strategies are required.
 
 ### Knowledge Gaps Addressed
 
-- **Initial Gap**: Limited understanding of ensemble methods
-  - **Solution**: Completed online courses on advanced machine learning techniques
-- **Feedback Integration**: Incorporated peer review suggestions on model validation techniques
-- **Continuous Learning**: Regular model retraining based on new data patterns
+- **Initial Gap**: Limited understanding of how to reorder categories on the x-axis of bar charts in Power BI.
+  - **Solution**: Learned and applied techniques for reordering categories on the x-axis to improve clarity and accuracy of visualisations.
 
 ## Development Roadmap
 
@@ -177,42 +168,22 @@ Some categorical fields contained "Unknown" values.
 
 1. **Data Quality Issues**
 
-   - **Challenge**: Inconsistent data formats and missing values
+   - **Challenge**: Some categorical fields contained "Unknown" values.
    - **Strategy**: Developed robust data cleaning pipelines and validation rules
 
-2. **Model Selection Complexity**
+2. **Working Collaborative Using Git**
 
-   - **Challenge**: Balancing model accuracy with interpretability
-   - **Strategy**: Implemented multiple models and created ensemble approaches
-
-3. **Stakeholder Alignment**
-   - **Challenge**: Different departments had varying requirements
-   - **Strategy**: Conducted regular stakeholder meetings and iterative feedback sessions
+   - **Challenge**: Initially, the team used git clone instead of forking the repository, which required manual merges on GitHub instead of streamlined version control in VS Code.
+   - **Strategy**: Established proper Git workflows (forking, branching, and pull requests), improving collaboration efficiency and reducing integration conflicts.
 
 ### Future Learning Goals
 
-- **Advanced Deep Learning**: Explore neural networks for improved prediction accuracy
-- **Real-time Analytics**: Implement streaming data processing for live churn monitoring
-- **Causal Inference**: Study causal analysis techniques to better understand churn drivers
+- **Enhance Power BI Expertise**: Deepen knowledge of DAX and develop skills such as reordering categories on the x-axis of bar charts and applying advanced visualization techniques.
+- **Advance Data Analysis Capabilities**: Gain proficiency in predictive analytics and explore advanced machine learning methodologies to deliver deeper insights.
 
 ### Collaboration methodology
 
 We held regular meetings via Google Meet to discuss strategy. We used Discord to coordinate activities. We typically worked in teams of two. Each team focused on updating a single feature. We coordinated work and updates directly with each other. This approach helped us avoid merge conflicts. It allowed all team members to contribute. We also utilised a practice repository to test ideas, code, and enhance our collaboration.
-
-## Deployment
-
-### Heroku
-
-- The App live link is: https://YOUR_APP_NAME.herokuapp.com/
-- Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
-- The project was deployed to Heroku using the following steps.
-
-1. Log in to Heroku and create an App
-2. From the Deploy tab, select GitHub as the deployment method.
-3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select the branch you want to deploy, then click Deploy Branch.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
-6. If the slug size is too large then add large files not required for the app to the .slugignore file.
 
 ## Main Data Analysis Libraries
 
@@ -226,11 +197,15 @@ We held regular meetings via Google Meet to discuss strategy. We used Discord to
 ## Credits
 
 - For git collaboration we drew extensively on [GitCheatsheet](https://github.com/Vasi012/Git-Cheatsheet) produced by our tutor Vasi.
-- You can break the credits section up into Content and Media, depending on what you have included in your project.
 
-### Content
+## Content
 
-### Media
+- Mikeecee1/Team1_Hackathon/jupyter_notebooks
+  - Extraction.ipynb
+  - Transformation.ipynb
+  - Visualisation.ipynb
+- Mikeecee1/Team1_Hackathon/Dashboards
+  - BankChurners.pbix
 
 ## Acknowledgements (optional)
 
